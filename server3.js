@@ -39,14 +39,12 @@ function incrementOnEachRequest() {
 }
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  incrementOnEachRequest();
   res.setHeader("Content-Type", "text/plain");
-
-  const message = "This is Node JS Server 2";
-
+  const message = "This is Node JS Server 3";
+  incrementOnEachRequest();
   res.end(message);
 });
 
 server.listen(port, () => {
-  console.log(`Server 2 running on 80`);
+  console.log(`Server 3 running on 80`);
 });
