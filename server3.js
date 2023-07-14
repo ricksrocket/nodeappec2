@@ -37,7 +37,6 @@ function incrementOnEachRequest() {
     }
   });
 }
-
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   incrementOnEachRequest();
