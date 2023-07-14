@@ -7,7 +7,7 @@ AWS.config.update({
   secretAccessKey: "YPwnIJyd5IfYlDN02ncHTHPOCm48X2QVWsBw1Vlp",
 });
 
-incrementOnEachRequest();
+
 
 function incrementOnEachRequest() {
   let dynamodb = new AWS.DynamoDB.DocumentClient();
@@ -40,7 +40,7 @@ function incrementOnEachRequest() {
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-
+  incrementOnEachRequest();
   res.setHeader("Content-Type", "text/plain");
 
   const message = "This is Node JS Server 2";
