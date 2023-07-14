@@ -14,3 +14,6 @@ sudo yum install -y nodejs
 node --version
 npm --version
 sudo yum install -y git
+
+
+# inside ec2, connect, sudo su (takes you to the root user)
